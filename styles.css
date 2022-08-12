@@ -1,13 +1,23 @@
 .main {
-    background-color: black;
-    color: white;
     width: 15em;
-    margin: 0 auto;
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 20em;
+    margin-top: 0%;
 }
 
+.main, .display {
+    background-color: black;
+    color: white;
+}
+
+.display {
+    margin-bottom: 0%;
+    margin: 0 auto;
+    width: 20em;
+}
 .display, .numbers, .operators, .extra, .bottomNumbers {
     text-align: center;
 }
@@ -22,12 +32,10 @@
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(1, 1fr);
-    background-color: grey;
 
 }
 .bottomNumbers {
     display: flex;
-    background-color: grey;
 }
 
 #zero {
@@ -46,4 +54,22 @@
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    display:block;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+    border: 1px solid black;
+    color: white;
+}
+
+#add, #subtract, #multiply, #divide, #equals {
+    background-color: orange;
+}
+
+#mod, #ac, #del {
+    background-color: rgb(147, 146, 146);
 }

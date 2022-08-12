@@ -1,0 +1,49 @@
+.main {
+    background-color: black;
+    color: white;
+    width: 15em;
+    margin: 0 auto;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.display, .numbers, .operators, .extra, .bottomNumbers {
+    text-align: center;
+}
+
+.topNumbers {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.numbers {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: grey;
+
+}
+.bottomNumbers {
+    display: flex;
+    background-color: grey;
+}
+
+#zero {
+    flex: 0 0 66.666%;
+}
+
+#dot { flex: 0 0 33.333%; }
+
+.operators {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.extra {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+}

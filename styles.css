@@ -4,8 +4,10 @@
     gap: 1px;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
-    width: 20em;
+    width: 11.7em;
     margin-top: 0%;
+    text-align: center;
+    padding: 0.2;
 }
 
 .main, .display {
@@ -16,7 +18,7 @@
 .display {
     margin-bottom: 0%;
     margin: 0 auto;
-    width: 20em;
+    width: 11.7em;
 }
 .display, .numbers, .operators, .extra, .bottomNumbers {
     text-align: center;
@@ -24,7 +26,6 @@
 
 .topNumbers {
     display: grid;
-    gap: 1px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -39,10 +40,13 @@
 }
 
 #zero {
-    flex: 0 0 66.666%;
+    flex: 0 0 62%;
+    border-radius: 35px / 90%;
 }
 
-#dot { flex: 0 0 33.333%; }
+#dot { 
+    flex: 0 0 30%; 
+}
 
 .operators {
     display: grid;
@@ -64,6 +68,7 @@ button {
     background-color: rgb(66, 66, 66);
     border: 1px solid black;
     color: white;
+    margin: 0.2em;
 }
 
 #add, #subtract, #multiply, #divide, #equals {

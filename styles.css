@@ -20,6 +20,8 @@
     margin-bottom: 0%;
     margin: 0 auto;
     width: 13.8em;
+    padding-top: 4em;
+    margin-top: 6%;
 }
 .display, .numbers, .operators, .extra, .bottomNumbers {
     text-align: center;
@@ -71,6 +73,7 @@ button {
     border: 1px solid black;
     color: white;
     margin: 0.2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #add, #subtract, #multiply, #divide, #equals {

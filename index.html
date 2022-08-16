@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
+  <title>iPhone Calculator for Browser</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
   <div class = "display">
-    <p id = "answer">531</p>
+    <p id = "answer">0</p>
   </div>
   <div class = "main">
     <div class = "numbers">
@@ -19,19 +19,19 @@
         <button id = "mod">%</button>
       </div>
       <div class = "topNumbers">
-        <button id = "7">7</button>
-        <button id = "8">8</button>
-        <button id = "8">9</button>
-        <button id = "4">4</button>
-        <button id = "5">5</button>
-        <button id = "6">6</button>
-        <button id = "1">1</button>
-        <button id = "2">2</button>
-        <button id = "3">3</button>
+        <button id = "7" onclick = "numberPushed(id)">7</button>
+        <button id = "8" onclick = "numberPushed(id)">8</button>
+        <button id = "9" onclick = "numberPushed(id)">9</button>
+        <button id = "4" onclick = "numberPushed(id)">4</button>
+        <button id = "5" onclick = "numberPushed(id)">5</button>
+        <button id = "6" onclick = "numberPushed(id)">6</button>
+        <button id = "1" onclick = "numberPushed(id)">1</button>
+        <button id = "2" onclick = "numberPushed(id)">2</button>
+        <button id = "3" onclick = "numberPushed(id)">3</button>
       </div>
       <div class = "bottomNumbers">
-        <button id = "zero">0</button>
-        <button id = "dot">.</button>
+        <button id = "zero" onclick = "numberPushed(id)">0</button>
+        <button id = "dot" onclick = "numberPushed(id)">.</button>
       </div>
     </div>
     <div class = "operators">

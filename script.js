@@ -1,5 +1,4 @@
-console.log(operate("subtract", 10, 6));
-console.log(add(10, 6));
+DISPLAY = "";
 
 function add(a, b) {
     return (a + b);
@@ -28,4 +27,11 @@ function operate(operator, a, b) {
         case "divide":
             return(subtract(a, b));
       }
+}
+
+function numberPushed(id) {
+    number = document.getElementById(id).innerHTML;
+    DISPLAY = DISPLAY + number;
+    console.log(DISPLAY);
+    document.getElementById("answer").innerHTML = DISPLAY;
 }

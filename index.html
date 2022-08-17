@@ -19,7 +19,7 @@
         <button id = "mod">%</button>
       </div>
       <div class = "topNumbers">
-        <button id = "7" onclick = "numberPushed(id)">7</button>
+        <button id = 7 onclick = "numberPushed(id)">7</button>
         <button id = "8" onclick = "numberPushed(id)">8</button>
         <button id = "9" onclick = "numberPushed(id)">9</button>
         <button id = "4" onclick = "numberPushed(id)">4</button>
@@ -35,11 +35,11 @@
       </div>
     </div>
     <div class = "operators">
-      <button id = "add">+</button>
-      <button id = "subtract">-</button>
-      <button id = "divide">/</button>
-      <button id = "multiply">x</button>
-      <button id = "equals">=</button>
+      <button id = "add" onclick = "operatorPushed(id)">+</button>
+      <button id = "subtract" onclick = "operatorPushed(id)">-</button>
+      <button id = "divide" onclick = "operatorPushed(id)">/</button>
+      <button id = "multiply" onclick = "operatorPushed(id)">x</button>
+      <button id = "equals" onclick = "operate(CURRENT_OPERATOR, FIRST_NUMBER, DISPLAY)">=</button>
     </div>
   </div>
 </head>

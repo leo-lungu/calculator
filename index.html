@@ -14,9 +14,9 @@
   <div class = "main">
     <div class = "numbers">
       <div class = "extra">
-        <button id = "ac">A/C</button>
-        <button id = "del">Del</button>
-        <button id = "mod">%</button>
+        <button id = "ac" onclick = "resetDisplay()">A/C</button>
+        <button id = "del" onclick = "deleteLast()">Del</button>
+        <button id = "mod" onclick = "operatorPushed(id)">%</button>
       </div>
       <div class = "topNumbers">
         <button id = 7 onclick = "numberPushed(id)">7</button>
@@ -39,7 +39,7 @@
       <button id = "subtract" onclick = "operatorPushed(id)">-</button>
       <button id = "divide" onclick = "operatorPushed(id)">/</button>
       <button id = "multiply" onclick = "operatorPushed(id)">x</button>
-      <button id = "equals" onclick = "operate(CURRENT_OPERATOR, FIRST_NUMBER, DISPLAY)">=</button>
+      <button id = "equals" onclick = "equalsPushed(id)">=</button>
     </div>
   </div>
 </head>

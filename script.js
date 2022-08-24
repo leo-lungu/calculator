@@ -4,7 +4,7 @@ let FIRST_NUMBER = "";
 let SECOND_NUMBER = "";
 
 function add(a, b) {
-    return (a - (-b));
+    return parseInt(a) + parseInt(b);
 }
 
 function subtract(a, b) {
@@ -29,6 +29,8 @@ function operate(operator, a, b) {
         DISPLAY = multiply(a, b);
       } else if (operator === "divide") {
         DISPLAY = divide(a, b);
+      } else if (operator === "mod") {
+        DISPLAY = a % b;
       } 
       document.getElementById("answer").innerHTML = DISPLAY;
       FIRST_NUMBER = DISPLAY;
@@ -44,13 +46,14 @@ function numberPushed(id) {
 
 function operatorPushed(id) {
     console.log("Current Operator: " + CURRENT_OPERATOR);
-    if (CURRENT_OPERATOR) {
+    if (CURRENT_OPERATOR !== "equals") {
         console.log("testoperator");
         console.log("FIRST: " + FIRST_NUMBER);
         console.log("DISPLAY: " + DISPLAY);
         operate(CURRENT_OPERATOR, FIRST_NUMBER, DISPLAY);
         DISPLAY = "";
         SECOND_NUMBER = "";
+        CURRENT_OPERATOR = id;
     } else {
         FIRST_NUMBER = DISPLAY;
         console.log("testnonoperator");
@@ -58,4 +61,25 @@ function operatorPushed(id) {
         DISPLAY = "";
         console.log(id);
     }
+}
+
+function equalsPushed(id) {
+      operate(CURRENT_OPERATOR, FIRST_NUMBER, DISPLAY);
+      CURRENT_OPERATOR = id;
+      document.getElementById("answer").innerHTML = DISPLAY;
+      console.log(DISPLAY);
+}
+
+function resetDisplay() {
+  DISPLAY = "";
+  CURRENT_OPERATOR = "";
+  FIRST_NUMBER = "";
+  SECOND_NUMBER = "";
+  document.getElementById("answer").innerHTML = "0";
+}
+
+function deleteLast() {
+  DISPLAY = DISPLAY.slice(0, -1);
+  console.log(DISPLAY);
+  document.getElementById("answer").innerHTML = DISPLAY;
 }

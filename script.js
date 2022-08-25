@@ -31,16 +31,23 @@ function operate(operator, a, b) {
   } else if (operator === "mod") {
     DISPLAY = b / 100;
   }
+  if (DISPLAY.toString().includes(".")) {
+    DISPLAY = parseFloat(DISPLAY).toFixed(3);
+  } else {
+    
+  }
   document.getElementById("answer").innerHTML = DISPLAY;
   FIRST_NUMBER = DISPLAY;
   console.log("first display: " + FIRST_NUMBER)
 }
 
 function numberPushed(id) {
-  number = document.getElementById(id).innerHTML;
-  DISPLAY = DISPLAY + number;
-  console.log(DISPLAY);
-  document.getElementById("answer").innerHTML = DISPLAY;
+  if (DISPLAY.length < 7) {
+    number = document.getElementById(id).innerHTML;
+    DISPLAY = DISPLAY + number;
+    console.log(DISPLAY);
+    document.getElementById("answer").innerHTML = DISPLAY;
+  }
 }
 
 function operatorPushed(id) {

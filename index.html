@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>iPhone Calculator for Browser</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <title>iPhone Calculator for Browser</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<body>
-  <img id = "iphoneImage" src = "iphone.png">
-  <div class = "phone">
-    <div class = "display">
-      <p id = "answer">0</p>
-    </div>
-    <div class = "main">
-      <div class = "numbers">
-        <div class = "extra">
-          <button id = "ac" onclick = "resetDisplay()">A/C</button>
-          <button id = "del" onclick = "deleteLast()">Del</button>
-          <button id = "mod" onclick = "operatorPushed(id)">%</button>
+  <body>
+    <img id="iphoneImage" src="iphone.png">
+    <div class="phone">
+      <div class="display">
+        <p id="answer">0</p>
+      </div>
+      <div class="main">
+        <div class="numbers">
+          <div class="extra">
+            <button id="ac" onclick="resetDisplay()">A/C</button>
+            <button id="del" onclick="deleteLast()">Del</button>
+            <button id="mod" onclick="operatorPushed(id)">%</button>
+          </div>
+          <div class="topNumbers">
+            <button id=7 onclick="numberPushed(id)">7</button>
+            <button id="8" onclick="numberPushed(id)">8</button>
+            <button id="9" onclick="numberPushed(id)">9</button>
+
+            <button id="4" onclick="numberPushed(id)">4</button>
+            <button id="5" onclick="numberPushed(id)">5</button>
+            <button id="6" onclick="numberPushed(id)">6</button>
+
+            <button id="1" onclick="numberPushed(id)">1</button>
+            <button id="2" onclick="numberPushed(id)">2</button>
+            <button id="3" onclick="numberPushed(id)">3</button>
+          </div>
+          <div class="bottomNumbers">
+            <button id="zero" onclick="numberPushed(id)">0</button>
+            <button id="dot" onclick="dotPushed(id)">.</button>
+          </div>
         </div>
-        <div class = "topNumbers">
-          <button id = 7 onclick = "numberPushed(id)">7</button>
-          <button id = "8" onclick = "numberPushed(id)">8</button>
-          <button id = "9" onclick = "numberPushed(id)">9</button>
-          <button id = "4" onclick = "numberPushed(id)">4</button>
-          <button id = "5" onclick = "numberPushed(id)">5</button>
-          <button id = "6" onclick = "numberPushed(id)">6</button>
-          <button id = "1" onclick = "numberPushed(id)">1</button>
-          <button id = "2" onclick = "numberPushed(id)">2</button>
-          <button id = "3" onclick = "numberPushed(id)">3</button>
-        </div>
-        <div class = "bottomNumbers">
-          <button id = "zero" onclick = "numberPushed(id)">0</button>
-          <button id = "dot" onclick = "dotPushed(id)">.</button>
+        <div class="operators">
+          <button id="divide" onclick="operatorPushed(id)">÷</button>
+          <button id="multiply" onclick="operatorPushed(id)">✕</button>
+          <button id="subtract" onclick="operatorPushed(id)">-</button>
+          <button id="add" onclick="operatorPushed(id)">+</button>
+          <button id="equals" onclick="equalsPushed(id)">=</button>
         </div>
       </div>
-      <div class = "operators">
-        <button id = "divide" onclick = "operatorPushed(id)">÷</button>
-        <button id = "multiply" onclick = "operatorPushed(id)">✕</button>
-        <button id = "subtract" onclick = "operatorPushed(id)">-</button>
-        <button id = "add" onclick = "operatorPushed(id)">+</button>
-        <button id = "equals" onclick = "equalsPushed(id)">=</button>
-      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
